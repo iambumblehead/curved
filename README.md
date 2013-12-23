@@ -17,7 +17,7 @@ This is an edited version of [a script][2] created by [Daniel Pupius][0]. Daniel
 provides values from a 'curved' set. See the examples:
 
 
-```javscript
+```javascript
 var curve, curveArr,
     steps = 20, 
     loopsteps = 19;

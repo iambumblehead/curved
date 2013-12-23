@@ -1,5 +1,5 @@
 // Filename: curved.js
-// Timestamp: 2013.12.22-22:08:26 (last modified)  
+// Timestamp: 2013.12.23-02:46:49 (last modified)  
 // Author(s): Dan Pupius (www.pupius.co.uk), Bumblehead (www.bumblehead.com)
 //
 // thanks to Daniel Pupius
@@ -46,7 +46,7 @@ var curved = ((typeof module === 'object') ? module : {}).exports = (function ()
     var shiftval = getShift(bgnCoord, endCoord),
         C1 = endCoord + shiftval,
         C4 = bgnCoord + shiftval,
-        C2_3 = easeStr === 'ease-end' ? C1 : C4;
+        C2_3 = easeStr === 'end' ? C1 : C4;
 
     return function (per) {
       return Math.round(
