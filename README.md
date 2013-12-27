@@ -23,7 +23,7 @@ var curve, curveArr,
     loopsteps = 19;
     
 // build values from -100 to 100, 'slow' at the beginning
-curve = curved(-100, 100, 'ease-bgn');
+curve = curved(-100, 100, 'bgn');
 curveArr = [];
 for (var i = 0, percent; i < steps; i++) {
     curveArr.push(curve(i / loopsteps));
@@ -32,7 +32,7 @@ console.log(curveArr.join(','));
 // -100,-100,-100,-99,-98,-96,-94,-90,-85,-79,-71,-61,-50,-36,-20,-2,19,43,70,100
   
 // build values from -100 to 100, 'slow' at the end
-curve = curved(-100, 100, 'ease-end');
+curve = curved(-100, 100, 'end');
 curveArr = [];
 for (var i = 0, percent; i < steps; i++) {
     curveArr.push(curve(i / loopsteps));

@@ -1,5 +1,5 @@
 // Filename: curved.js
-// Timestamp: 2013.12.23-02:46:49 (last modified)  
+// Timestamp: 2013.12.26-21:18:26 (last modified)  
 // Author(s): Dan Pupius (www.pupius.co.uk), Bumblehead (www.bumblehead.com)
 //
 // thanks to Daniel Pupius
@@ -24,10 +24,9 @@
 // Where C is the control, and '[ ]' indicates subscript
 // point = C[1]B[1](d) + C[2]B[2](d) + C[3]B[3](d) + C[4]B[4](d)
 //
-// Some changes to the scripting given at the link above:
+// change to the scripting at the link above:
 // - given values are 'shifted' into a positive axis so that curves may be
 //   generated when negative values are given.
-// - xy values are stored in an array rather than an object
 
 var curved = ((typeof module === 'object') ? module : {}).exports = (function () {
 
