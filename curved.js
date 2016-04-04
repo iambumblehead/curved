@@ -1,5 +1,5 @@
 // Filename: curved.js
-// Timestamp: 2013.12.26-21:18:26 (last modified)  
+// Timestamp: 2016.04.03-20:25:09 (last modified)
 // Author(s): Dan Pupius (www.pupius.co.uk), Bumblehead (www.bumblehead.com)
 //
 // thanks to Daniel Pupius
@@ -28,7 +28,7 @@
 // - given values are 'shifted' into a positive axis so that curves may be
 //   generated when negative values are given.
 
-var curved = ((typeof module === 'object') ? module : {}).exports = (function () {
+var curved = module.exports = (function () {
 
   function B1(t) { return t * t * t; }
   function B2(t) { return 3 * t * t * (1 - t); }

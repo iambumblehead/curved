@@ -2,19 +2,12 @@ curved
 ======
 **(c)[Daniel Pupius][0]** [MIT](#license), edited by [Bumblehead][0]
     
-### Preface:
-
 This is an edited version of [a script][2] created by [Daniel Pupius][0]. Daniel gives me permission publish this with my own changes -visit Dan's [web site][0].
 
 
 [0]: http://pupius.co.uk/                              "daniel pupius"
 [1]: http://www.bumblehead.com                            "bumblehead"
 [2]: http://13thparallel.com/archive/bezier-curves/      "bezier-demo"
-
----------------------------------------------------------
-#### <a id="install"></a>Overview:
-
-provides values from a 'curved' set. See the examples:
 
 
 ```javascript
@@ -43,34 +36,6 @@ console.log(curveArr.join(','));
 
 There is *no* error handling. The first two parameters to `curved` must be numbers or the script will break.
 
----------------------------------------------------------
-#### <a id="install"></a>Install:
-
-curved may be downloaded directly or installed through `npm`.
-
- * **npm**
-
- ```bash
- $ npm install curved
- ```
-
- * **Direct Download**
- 
- ```bash
- $ git clone https://github.com/iambumblehead/curved.git
- ```
-
----------------------------------------------------------
-#### <a id="test"></a>Test:
-
-to run tests, use `npm test` from a shell.
-
-```bash
-$ npm test
-```
-
----------------------------------------------------------
-#### <a id="license">License:
 
  ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
 
