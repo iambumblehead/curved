@@ -1,5 +1,5 @@
 // Filename: curved.js
-// Timestamp: 2016.04.03-20:25:09 (last modified)
+// Timestamp: 2017.04.26-21:35:40 (last modified)
 // Author(s): Dan Pupius (www.pupius.co.uk), Bumblehead (www.bumblehead.com)
 //
 // thanks to Daniel Pupius
@@ -28,33 +28,30 @@
 // - given values are 'shifted' into a positive axis so that curves may be
 //   generated when negative values are given.
 
-var curved = module.exports = (function () {
+const curved = module.exports = (() => {
 
-  function B1(t) { return t * t * t; }
-  function B2(t) { return 3 * t * t * (1 - t); }
-  function B3(t) { return 3 * t * (1 - t) * (1 - t); }
-  function B4(t) { return (1 - t) * (1 - t) * (1 - t); }
+  const B1 = t => t * t * t,
+        B2 = t => 3 * t * t * (1 - t),
+        B3 = t => 3 * t * (1 - t) * (1 - t),
+        B4 = t => (1 - t) * (1 - t) * (1 - t),
+        
+        shift = (x1, x2, min = Math.min(x1, x2)) =>
+          min && -min;
 
-  function getShift(x1, x2) {
-    var min = Math.min(x1, x2);
-    return min && -min;
-  }
-
-  // easeStr should be a string 'ease-end' or 'ease-bgn'
-  return function (bgnCoord, endCoord, easeStr) {
-    var shiftval = getShift(bgnCoord, endCoord),
+  // easeStr should be a string 'end' or 'bgn'
+  return (bgnCoord, endCoord, easeStr) => {
+    let shiftval = shift(bgnCoord, endCoord),
         C1 = endCoord + shiftval,
         C4 = bgnCoord + shiftval,
         C2_3 = easeStr === 'end' ? C1 : C4;
 
-    return function (per) {
-      return Math.round(
+    return per => 
+      Math.round(
         C1 * B1(per) +
         C2_3 * B2(per) +
         C2_3 * B3(per) +
-        C4 * B4(per)
+          C4 * B4(per)
       ) - shiftval;
-    };
   };
 
-}());
+})();
