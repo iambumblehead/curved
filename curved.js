@@ -28,8 +28,7 @@
 // - given values are 'shifted' into a positive axis so that curves may be
 //   generated when negative values are given.
 
-const curved = module.exports = (() => {
-
+export default (() => {
   const B1 = t => t * t * t,
         B2 = t => 3 * t * t * (1 - t),
         B3 = t => 3 * t * (1 - t) * (1 - t),
@@ -53,5 +52,4 @@ const curved = module.exports = (() => {
           C4 * B4(per)
       ) - shiftval;
   };
-
 })();

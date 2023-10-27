@@ -37,7 +37,7 @@ console.log(curveArr.join(','));
 There is *no* error handling. The first two parameters to `curved` must be numbers or the script will break.
 
 
- ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
+ ![scrounge](https://github.com/iambumblehead/scroungejs/raw/main/img/hand.png) 
 
 (The MIT License)
 
